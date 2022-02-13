@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,9 +16,11 @@ background:linear-gradient(red,blue);
 </style>
 </head>
 <body bgcolor="white">
-<form action="#" name="StudentRegistration" onSubmit="return(validate());">
-
-<table cellpadding="4" width="40%" bgcolor="black" align="center"
+<center>
+<form action="#" name="StudentRegistration" onSubmit="return(validate());" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+<fieldset>
+<legend>Student Data </legend>
+<table cellpadding="4" width="40%" bgcolor="black" legealign="center"
 cellspacing="4">
 
 <tr>
@@ -37,23 +40,26 @@ cellspacing="4">
 size="30"></td>
 </tr>
 <tr>
-<td><label for="father name">ather name</label></td>
+<td><label for="father name">Father name</label></td>
 <td><input type="text" name="paddress" id="paddress" size="30"></td>
 </tr>
 <tr>
-<td>Postal Address</td>
-<td><input type="text" name="paddress" id="paddress" size="30"></td>
+<td><label for="uaddress">Address:</label></td>
+            <td><textarea name="uaddress" id="uaddress" cols="30" rows="1" required></textarea></td>
 </tr>
 <tr>
-<td>Personal Address</td>
-<td><input type="text" name="personaladdress"
-id="personaladdress" size="30"></td>
-</tr>
-
+            <td><label for="udob">Date of Birth</label></td>
+            <td><input type="date" name="udob" id="udob" required></td>
+        </tr>
 <tr>
 <td>Sex</td>
-<td><input type="radio" name="sex" value="male" size="10">Male
-<input type="radio" name="sex" value="Female" size="10">Female</td>
+<td>
+
+<input type="radio" name="sex" value="male" size="10" id="Male">
+<label for="Male">Male</label>
+<input type="radio" name="sex" value="Female" size="10" id="Female">
+<label for="Female">Female</label>
+</td>
 </tr>
 
 <tr>
@@ -68,14 +74,18 @@ id="personaladdress" size="30"></td>
 </tr>
 
 <tr>
+ 
 <td>Course</td>
 <td><select name="Course">
+<datalist id="browsers">
 <option value="-1" selected>select..</option>
 <option value="B.Tech">B.TECH</option>
 <option value="MCA">MCA</option>
 <option value="MBA">MBA</option>
 <option value="BCA">BCA</option>
+</datalist>
 </select></td>
+ 
 </tr>
 
 <tr>
@@ -102,7 +112,7 @@ id="personaladdress" size="30"></td>
 </tr>
 <tr>
 <td>PinCode</td>
-<td><input type="text" name="pincode" id="pincode" size="30"></td>
+<td><input type="text" name="pincode" id="pincode" sizelege="30"></td>
 
 </tr>
 <tr>
@@ -123,12 +133,23 @@ id="personaladdress" size="30"></td>
         <td><label for="upic">Upload Your Picture</label></td>
         <td><input type="file" name="upic" id="upic" required></td>
         </tr>
-        <tr>
+ <tr>
+            <td><label for="urange">Courase Coverage:</label></td>
+            <td><input type="range" name="urange" id="urange" value="20"></td>
+        </tr>       
 <tr>
-<td><input type="reset"></td>
-<td colspan="2"><button type="button" onclick="alert('Sucessful')">Submit form</button></td>
+<td></td>
+<td>
+<button type="button" onclick="alert('Sucessful')">Submit form</button>
+<input type="reset" name="resetb"></td>
 </tr>
 </table>
+</fieldset>
+
+  
 </form>
+
+</center>
 </body>
 </html>
+
